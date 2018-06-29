@@ -1,0 +1,154 @@
+:root{
+	/*--------------------------------------*/
+	--max-width: 		1362px;
+	--max-width: 		400px;
+	/*--------------------------------------*/
+	--dark: 		rgb(40,39,39);
+	/*--------------------------------------*/
+	--light: 		#fff;
+	/*--------------------------------------*/
+	--blue: 		rgb(102,193,255);
+	--transBlue: 	rgba(102,193,255,0.9);
+	/*--------------------------------------*/
+	--yellow: 		rgb(253, 253, 166);
+	--visited: 		rgb(123, 23, 255)
+}
+/*fonts'*/
+*{
+	box-sizing: border-box;
+}
+
+h1, h1 a, h2, h2 a{
+	color: var(--dark);
+}
+h1 a:hover, h2 a:hover{
+	color: var(--blue);
+}
+h3,h4,h5,h6{
+	color: var(--dark);
+}
+h1{
+	font-size: 3em;
+}
+h2{
+	font-size: 2.5em;
+}
+h3{
+	font-size: 1.9em;
+}
+h4{
+	font-size: 1.6em;
+}
+h5{
+	font-size: 1.3em;
+}
+h6{
+	font-size: 1em;
+}
+
+
+/*--------------------------------------------------------------------------------------------------------*\
+||------------------------------------------------MENY----------------------------------------------------||
+\*--------------------------------------------------------------------------------------------------------*/
+#menu-bar{
+	background: var(--transBlue);
+	position: fixed;
+	top: 0;
+	width: 100%;
+	margin-bottom: 28px;
+}
+.admin-bar #menu-bar{
+	top: 46px;
+}
+
+#menu-bar .custom-logo-link{
+	position: absolute;
+	display: block;
+	width: 50px;
+	height: auto;
+	left: 50%;
+	top: 5px;
+	transform: translateX(-50%);
+}
+#menu-bar .custom-logo-link img{
+	width: 100%;
+	height: auto;
+	z-index: 10000;
+}
+#hamburger{
+	padding: 14px;
+	cursor: pointer;
+	width: 58px;
+}
+#hamburger div{
+	width: 30px;
+	height: 3px;
+	border-radius: 1.5px;
+	background: black;
+	margin-bottom: 7px;
+}
+#hamburger div:last-child{
+	margin-bottom: 0px;
+}
+
+#menu-bar #topMeny{
+	position: absolute;
+	background: var(--transBlue);
+	min-height: calc(100vh - 51px);
+	width: 80%;
+	overflow: hidden;
+	left: -80%;
+	transition: left .2s; 
+}
+#menu-bar #topMeny.visabale{
+	left: 0;
+}
+
+#menu-bar #topMeny ul{
+	list-style: none;
+	padding: 0 20px;
+}
+#menu-bar #topMeny li a{
+	display: block;
+	font-weight: 600;
+	text-decoration: none;
+	padding: 10px 0;
+	border-bottom: 2px solid var(--yellow);
+	color: var(--yellow);
+}
+#menu-bar #topMeny li a:visited{
+	color: var(--visited);
+}
+
+
+/*/headerimage*/
+body > header{
+	height: 100vh;
+
+}
+.main-header{
+	overflow: hidden;
+}
+
+#wp-custom-header-video{
+	/*width: 100%;*/
+	height: 100vh;
+	transform: translateX(-50%);
+}
+#wp-custom-header-video-button{
+	position: absolute;
+    top: 100px;
+    left: 10px;
+}
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+/* Styles */
+	.admin-bar #menu-bar {
+	    top: 32px;
+	}
+	#wp-custom-header-video{
+		width: 100%;
+		height: auto;
+		transform: translateX(0);
+	}	
+}
