@@ -1,0 +1,19 @@
+#images-pages li{
+	position: relative;
+	
+}
+#images-pages li a{
+	display: block;
+}
+#images-pages li p{
+	position: absolute;
+    bottom: 5px;
+    padding: 10px;
+    text-align: center;
+    left: 0;
+    /* right: 0; */
+    width: 258px;
+    background: var(--transDark);
+}
+
+

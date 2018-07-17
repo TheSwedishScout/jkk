@@ -3,18 +3,23 @@ get_header('home');
 ?>
 <main>
 <?php
-	/*
-	--avdelningar 
-	nästa läger (kalender)
-	senaste nyheten (post)
-	*/
+	
+	// meny med bilder
+		
+		wp_nav_menu(array( 'theme_location' => 'headpages', 'container_id'=> 'images-pages' ));
+	// Senaste nyheten
+
+	// Stor knapp till alla händelser
+
+	// Sponsor widget
+
 		?>
 	<div class="page_post"> 
 	<?php
 	if ( have_posts() ) {
 	while ( have_posts() ) {
 		the_post(); 
-		echo "<h1>".get_bloginfo( 'name' )."</h1>";
+		
 		the_content();
 		}
 	}

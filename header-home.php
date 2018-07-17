@@ -18,7 +18,9 @@
 	        <?php dynamic_sidebar( 'action' ); ?>
 	    </div>
 	<?php endif; ?>
-	<!--<button>action</button>-->
+	<?php
+		echo "<h1>".get_bloginfo( 'name' )."</h1>";
+	?>
 	
 </header>
 <?php

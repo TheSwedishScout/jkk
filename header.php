@@ -9,21 +9,23 @@
 </head>
 <body <?php echo 'class="' . join( ' ', str_replace("custom-background", "", get_body_class())) . '"'; ?>>
 	<header class="main-header" style="<?php
-		if ( is_home() ) {
-			?>
-			background-image: url(<?php header_image(); ?>);
-			<?php
-		}else{
+
 			?>
 			background-image: url(<?= the_post_thumbnail_url('pageHeader'); ?>);
 			<?php
-		}
-		?>">
+				?>">
 		<?php
 			get_template_part( '/inc/meny', 'meny' );
 		?>
 		</nav>
-
+		<?php
+			if ( is_page() ) {
+				the_post();
+				?>
+				<h1 class="heading"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+				<?php 
+			}
+				?>
 		  
 	</header>
 	<?php 

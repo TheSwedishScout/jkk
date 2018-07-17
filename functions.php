@@ -7,6 +7,8 @@ function jkk_max_additional_custom_styles() {
     wp_enqueue_style( 'Null', get_template_directory_uri() . '/css/null.css' );
     wp_enqueue_style( 'core', get_template_directory_uri() . '/css/wpCore.css' );
     wp_enqueue_style( 'jonkopiongskanotklubb', get_template_directory_uri() . '/css/main.css' );
+    wp_enqueue_style( 'frontpage', get_template_directory_uri() . '/css/frontpage.css' );
+    wp_enqueue_style( 'footer', get_template_directory_uri() . '/css/footer.css' );
 
     wp_enqueue_script("jquery");
     wp_enqueue_script( 'jkkjs', get_template_directory_uri() . '/js/main.js' );
@@ -20,7 +22,11 @@ add_action( 'wp_enqueue_scripts', 'jkk_max_additional_custom_styles' );
 *
 * Add a menu location
 */
-register_nav_menu('main', 'The Main menu' );
+add_action( 'after_setup_theme', 'register_my_menu' );
+function register_my_menu(){
+    register_nav_menu('main', 'The Main menu' );
+    register_nav_menu('headpages', 'Main pages whit images on frontpage' );
+}
 /** - - - - - - - - - - - - - - - - - - - - - - - - - - - - -**/
 function jkk_max_widgets_init() {
     register_sidebar( array(
@@ -52,7 +58,7 @@ add_action( 'after_setup_theme', 'jkk_max_theme_setup' );
 function jkk_max_theme_setup() {
 	add_image_size( 'logo_size', 100, 100, false );  
 	add_image_size( 'wallsize', 258 );  
-	add_image_size( 'pageHeader', 1920, 250, true );  
+	add_image_size( 'pageHeader', 1920, 540, true );  
 
 
     /* Add theme support for:
@@ -85,5 +91,8 @@ function jkk_max_theme_setup() {
 	add_theme_support( 'custom-header', $defaults );
 }
 
+
+include_once('inc/imageInMenu.php');
+//include 'inc/admin-function.php';
 
 ?>

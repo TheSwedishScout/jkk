@@ -4,6 +4,7 @@
 	--max-width: 		400px;
 	/*--------------------------------------*/
 	--dark: 		rgb(40,39,39);
+	--transDark: 		rgba(40,39,39,0.8);
 	/*--------------------------------------*/
 	--light: 		#fff;
 	/*--------------------------------------*/
@@ -69,11 +70,11 @@ h6{
 	left: 50%;
 	top: 5px;
 	transform: translateX(-50%);
+	z-index: 2;
 }
 #menu-bar .custom-logo-link img{
 	width: 100%;
 	height: auto;
-	z-index: 10000;
 }
 #hamburger{
 	padding: 14px;
@@ -86,9 +87,25 @@ h6{
 	border-radius: 1.5px;
 	background: black;
 	margin-bottom: 7px;
+    transition: .2s transform;
+    transform-origin: 35% 50%;
+}
+
+#hamburger div:first-child{
+	transform-origin: 0% 50%;
 }
 #hamburger div:last-child{
 	margin-bottom: 0px;
+	transform-origin: 0% 50%;
+}
+#hamburger.close div{	
+	transform: scaleX(0.1);
+}
+#hamburger.close div:first-child{
+	transform: rotate(42deg);
+}
+#hamburger.close div:last-child{
+	transform: rotate(-42deg);
 }
 
 #menu-bar #topMeny{
@@ -96,6 +113,7 @@ h6{
 	background: var(--transBlue);
 	min-height: calc(100vh - 51px);
 	width: 80%;
+	max-width: 340px;
 	overflow: hidden;
 	left: -80%;
 	transition: left .2s; 
@@ -122,9 +140,12 @@ h6{
 
 
 /*/headerimage*/
-body > header{
+body.home > header{
 	height: 100vh;
-
+}
+body > header{
+	height: 540px;
+	position: relative;
 }
 .main-header{
 	overflow: hidden;
@@ -151,4 +172,11 @@ body > header{
 		height: auto;
 		transform: translateX(0);
 	}	
+}
+header h1{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%);
+	color: #777;
 }
