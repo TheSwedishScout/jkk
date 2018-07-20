@@ -13,28 +13,17 @@ get_header('home');
 
 	// Sponsor widget
 
+
 		?>
-	<div class="page_post"> 
-	<?php
-	if ( have_posts() ) {
-	while ( have_posts() ) {
-		the_post(); 
-		
-		the_content();
-		}
-	}
-		 
-	?>
-	</div>
 	
-	<div class="frontpageNotes" >
 	
+	<div class="latestNews" >
 	
 	<?php
 
 	$args = array(
-		'post_type' => 'front_page',
-		'posts_per_page' => 4,
+		'post_type' => 'post',
+		'posts_per_page' => 1,
 		'post__in'  => get_option( 'sticky_posts' ),
 	);
 	$query = new WP_Query( $args );
@@ -45,12 +34,13 @@ get_header('home');
 		<div class="news">
 		<?php
 		$query->the_post(); 
-		echo "<h2><a href ='the_permalink();'>";
-		the_title();
-		echo "</a></h2>";
-		the_content();
+		?>
+		<h2><a href="<?= the_permalink();?>"> <?= the_title() ?></a></h2>
+		<?php
+		the_excerpt();
 		?>
 		</div>
+		<a href="<?= the_permalink(); ?>"><?= __('Läs mer', 'jonkopiongskanotklubb')?></a>
 		<?php
 		}
 	}
@@ -63,15 +53,7 @@ get_header('home');
 	*/
 
 ?>
-	</div> <!-- frontpagenotes-->
-	<?php  
-	if ( have_posts() ) {
-		while ( have_posts() ) {
-			the_post(); 
-			the_post_thumbnail();
-		}
-	}
-	?>
+	</div> <!-- latestNews-->
 </main>
 <?php
 get_footer();

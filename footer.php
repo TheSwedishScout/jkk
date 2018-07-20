@@ -1,5 +1,5 @@
 
-<footer>
+<footer class="theme-footer">
 	<div>Kontakt vänster</div>
 	<div>
 		<?php if ( is_active_sidebar( 'action' ) ) : ?>

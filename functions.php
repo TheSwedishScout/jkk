@@ -57,7 +57,7 @@ add_action( 'widgets_init', 'jkk_max_widgets_init' );
 add_action( 'after_setup_theme', 'jkk_max_theme_setup' );
 function jkk_max_theme_setup() {
 	add_image_size( 'logo_size', 100, 100, false );  
-	add_image_size( 'wallsize', 258 );  
+	add_image_size( 'wallsize', 700 );  
 	add_image_size( 'pageHeader', 1920, 540, true );  
 
 
@@ -93,6 +93,7 @@ function jkk_max_theme_setup() {
 
 
 include_once('inc/imageInMenu.php');
+include_once('inc/sponsorPostType.php');
 //include 'inc/admin-function.php';
 
 ?>
