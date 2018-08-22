@@ -50,7 +50,7 @@ function custom_post_type_sponsor() {
 		'publicly_queryable'    => true,
 		'capability_type'       => 'post',
 	);
-	register_post_type( 'sponsors_post_type', $args );
+	register_post_type( 'sponsors', $args );
 
 }
 add_action( 'init', 'custom_post_type_sponsor', 0 );

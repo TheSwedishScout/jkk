@@ -30,13 +30,13 @@ function register_my_menu(){
 /** - - - - - - - - - - - - - - - - - - - - - - - - - - - - -**/
 function jkk_max_widgets_init() {
     register_sidebar( array(
-        'name'          => __( 'Sid panel', 'jonkopiongskanotklubb' ),
-        'id'            => 'sidebar-1',
-        'description'   => __( 'Widgets i denna sidpanel visas på alla sidor förutom start sidan', 'jonkopiongskanotklubb' ),
+        'name'          => __( 'contact', 'jonkopiongskanotklubb' ),
+        'id'            => 'contact',
+        'description'   => __( 'Information som är i footern kontakt och adress tillexempel', 'jonkopiongskanotklubb' ),
         'before_widget' => '<li id="%1$s" class="widget %2$s">',
         'after_widget'  => '</li>',
-        'before_title'  => '<h2 class="widgettitle">',
-        'after_title'   => '</h2>',
+        'before_title'  => '<h3 class="widgettitle">',
+        'after_title'   => '</h3>',
     ) );
     register_sidebar(array(
     	'name' 			=> __('action', 'jonkopiongskanotklubb' ),
@@ -94,6 +94,6 @@ function jkk_max_theme_setup() {
 
 include_once('inc/imageInMenu.php');
 include_once('inc/sponsorPostType.php');
-//include 'inc/admin-function.php';
+include_once('inc/admin-function.php');
 
 ?>
