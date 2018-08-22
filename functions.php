@@ -7,6 +7,7 @@ function jkk_max_additional_custom_styles() {
     wp_enqueue_style( 'Null', get_template_directory_uri() . '/css/null.css' );
     wp_enqueue_style( 'core', get_template_directory_uri() . '/css/wpCore.css' );
     wp_enqueue_style( 'jonkopiongskanotklubb', get_template_directory_uri() . '/css/main.css' );
+    wp_enqueue_style( 'article', get_template_directory_uri() . '/css/article.css' );
     wp_enqueue_style( 'frontpage', get_template_directory_uri() . '/css/frontpage.css' );
     wp_enqueue_style( 'footer', get_template_directory_uri() . '/css/footer.css' );
 
