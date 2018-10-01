@@ -15,12 +15,14 @@ function jkk_max_cusom_settings(){
 	register_setting( 'jkk_settings_group_social', 'Twitter' );
 	register_setting( 'jkk_settings_group_social', 'Googleplus' );
 	register_setting( 'jkk_settings_group_social', 'YouTube' );
+	register_setting( 'jkk_settings_group_social', 'Medlem' );
 	add_settings_section( 'sofia-max-social-media', 'Sociala medier', 'jkk_max_sociala_medier_options', 'jkk_max' );
 	add_settings_field( 'facebook-link', 'Facebook', 'jkk_max_insert_social_media', 'jkk_max', 'sofia-max-social-media', array( 'for' => 'Facebook', 'type'=>"text" ));
 	add_settings_field( 'instagram-link', 'Instagram', 'jkk_max_insert_social_media', 'jkk_max', 'sofia-max-social-media', array( 'for' => 'Instagram', 'type'=>"text" ));
 	add_settings_field( 'twitter-link', 'Twitter', 'jkk_max_insert_social_media', 'jkk_max', 'sofia-max-social-media', array( 'for' => 'Twitter', 'type'=>"text" ));
 	add_settings_field( 'googleplus-link', 'Googleplus', 'jkk_max_insert_social_media', 'jkk_max', 'sofia-max-social-media', array( 'for' => 'Googleplus', 'type'=>"text" ));
 	add_settings_field( 'youtube-link', 'YouTube', 'jkk_max_insert_social_media', 'jkk_max', 'sofia-max-social-media', array( 'for' => 'YouTube', 'type'=>"text" ));
+	add_settings_field( 'medlem-link', 'Medlem', 'jkk_max_insert_social_media', 'jkk_max', 'sofia-max-social-media', array( 'for' => 'Medlem', 'type'=>"text" ));
 
 
 

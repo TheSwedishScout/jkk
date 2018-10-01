@@ -169,8 +169,25 @@ body > header{
     top: 100px;
     left: 10px;
 }
-#topMeny .social-aria a:first-child{
+div.qick{
+	margin-top: 10px;
+	display: grid;
+	grid-template-columns: 2fr 1fr;
 	margin-left: 20px;
+	justify-items: center;
+}
+#user{
+	grid-column-start: 2;
+}
+#user img{
+	height: 28px;
+}
+.qick .social-aria{
+	grid-column-start: 1;
+    grid-row-start: 1;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+
 }
 /* Desktops and laptops ----------- */
 @media only screen  and (min-width : 1224px) {
