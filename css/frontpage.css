@@ -3,8 +3,8 @@
 }
 #images-pages ul{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 350px;
+    grid-template-rows: 180px 180px 180px;
+    grid-template-columns: 100%;
 }
 #images-pages li{
     position: relative;
@@ -22,6 +22,7 @@
 #images-pages li a{
     display: block;
     color: var(--light);
+    height: 100%;
 }
 #images-pages li a:hover{
     color: var(--yellow);
@@ -40,3 +41,14 @@
 }
 
 
+.latestNews{
+    text-align: center;
+}
+
+@media only screen  and (min-width : 1224px) {
+    #images-pages ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 350px;
+    }
+}
