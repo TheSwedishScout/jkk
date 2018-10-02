@@ -46,7 +46,14 @@ h5{
 h6{
 	font-size: 1em;
 }
+.button{
+	background: var(--blue);
+	padding: 10px;
+	font-weight: 600;
+	color: var(--light);
+	border-radius: 50px;
 
+}
 
 /*--------------------------------------------------------------------------------------------------------*\
 ||------------------------------------------------MENY----------------------------------------------------||
@@ -162,6 +169,26 @@ body > header{
     top: 100px;
     left: 10px;
 }
+div.qick{
+	margin-top: 10px;
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	margin-left: 20px;
+	justify-items: center;
+}
+#user{
+	grid-column-start: 2;
+}
+#user img{
+	height: 28px;
+}
+.qick .social-aria{
+	grid-column-start: 1;
+    grid-row-start: 1;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+
+}
 /* Desktops and laptops ----------- */
 @media only screen  and (min-width : 1224px) {
 /* Styles */
@@ -175,6 +202,37 @@ body > header{
 		position: absolute;
     	bottom: 0px;
 	}	
+	#hamburger{
+		display: none;
+	}
+	#menu-bar #topMeny{
+		width: 50%;
+		margin: 0 auto;
+		left: auto;
+		position: relative;
+		max-width: 100%;
+		min-height: 0px;
+		background: none;
+	}
+	#menu-bar{
+		height: 52px;
+	}
+	#menu-bar #topMeny ul{
+		display: grid;
+		grid-template-columns: repeat( 3, 1fr) 85px repeat( 3, 1fr) ;
+	}
+	#menu-bar #topMeny ul li{
+		text-align: center;
+	}
+	.empty{
+		grid-column: 4;
+    	grid-row-start: 1;
+	}
+	#topMeny .social-aria{
+		display: none;
+	
+	}
+	
 }
 header h1{
 	position: absolute;

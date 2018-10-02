@@ -1,0 +1,46 @@
+article{    
+	width: 80%;
+    margin: 0 auto;
+    max-width: 1224px;
+}
+p:not(:first-child){
+	margin: 15px 0px; 
+}
+figure.wp-block-image{
+	    padding: 40px;
+    border: 1px solid #777;
+}
+figure.alignfull{
+	margin: 0;
+	border: none;
+	padding: 0;
+	width: 100%;
+
+}
+figure.alignfull img{
+	width: 100%;
+	}
+blockquote.wp-block-quote {
+	border-left: 4px solid black;
+	padding: 4px 1.25em;
+}
+blockquote.wp-block-quote.is-style-large {
+	
+	border-left: none;
+}
+blockquote p{
+	font-style: italic;
+	font-size: 1em;
+
+}
+blockquote cite{
+	font-size: .8em;
+	color: #777;
+	display: block;
+
+	margin-top: 15px;
+
+}
+article ul{
+	padding-left: 35px;
+}

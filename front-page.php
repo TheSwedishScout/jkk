@@ -40,7 +40,7 @@ get_header('home');
 		the_excerpt();
 		?>
 		</div>
-		<a href="<?= the_permalink(); ?>"><?= __('Läs mer', 'jonkopiongskanotklubb')?></a>
+		<a class="readmore button" href="<?= the_permalink(); ?>"><?= __('Läs mer', 'jonkopiongskanotklubb')?></a>
 		<?php
 		}
 	}

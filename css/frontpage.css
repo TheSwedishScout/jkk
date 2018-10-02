@@ -1,3 +1,11 @@
+.home main{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "top" "middle" "bottom";
+
+}
+
 #images-pages{
     margin: 90px 0;
 }
@@ -5,6 +13,8 @@
     display: grid;
     grid-template-rows: 180px 180px 180px;
     grid-template-columns: 100%;
+    grid-template-columns: 100%;
+    grid-template-rows: 180px 180px 180px;
 }
 #images-pages li{
     position: relative;
@@ -46,6 +56,9 @@
 }
 
 @media only screen  and (min-width : 1224px) {
+    .latestNews{
+        grid-area: middle
+    }
     #images-pages ul{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
