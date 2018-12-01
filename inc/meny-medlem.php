@@ -9,16 +9,16 @@
 		?>
 		<nav id="topMeny">
 		  <?php 
-		  	wp_nav_menu(array('menu' => 'main' , 'container_id'=> 'main-menu', 'container' => FALSE, 'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s<li class="empty"></li></ul>' ));
+		  	wp_nav_menu(array('menu' => 'medlem' , 'container_id'=> 'main-menu', 'container' => FALSE, 'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s<li class="empty"></li></ul>' ));
 
 		  	?>
 		  	<div class="qick">
 			  		
 			  	<div id="user">
 				  	<?php 
-				  	if (!empty(get_option( 'medlem' ))){
+				  	if (!empty(get_option( 'medlem-out' ))){
 					?>
-						<a href="<?=esc_attr( get_option( 'medlem' ) )?>" title="Medlemsidor"><img src="<?= get_template_directory_uri()."/images/user.png"; ?>"></a>
+						<a href="<?=esc_attr( get_option( 'medlem-out' ) )?>" title="Medlemsidor"><img src="<?= get_template_directory_uri()."/images/user.png"; ?>"></a>
 			  			
 					<?php
 					}

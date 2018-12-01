@@ -4,12 +4,15 @@
 function jkk_max_additional_custom_styles() {
 
     /*Enqueue The Styles*/
-    wp_enqueue_style( 'Null', get_template_directory_uri() . '/css/null.css' );
+    /*wp_enqueue_style( 'Null', get_template_directory_uri() . '/css/null.css' );
     wp_enqueue_style( 'core', get_template_directory_uri() . '/css/wpCore.css' );
     wp_enqueue_style( 'jonkopiongskanotklubb', get_template_directory_uri() . '/css/main.css' );
     wp_enqueue_style( 'article', get_template_directory_uri() . '/css/article.css' );
     wp_enqueue_style( 'frontpage', get_template_directory_uri() . '/css/frontpage.css' );
     wp_enqueue_style( 'footer', get_template_directory_uri() . '/css/footer.css' );
+    wp_enqueue_style( 'blog', get_template_directory_uri() . '/css/blog.css' );*/
+
+    wp_enqueue_style( 'all', get_template_directory_uri() . '/css/allinone.css' );
 
     wp_enqueue_script("jquery");
     wp_enqueue_script( 'jkkjs', get_template_directory_uri() . '/js/main.js' );
@@ -26,6 +29,7 @@ add_action( 'wp_enqueue_scripts', 'jkk_max_additional_custom_styles' );
 add_action( 'after_setup_theme', 'register_my_menu' );
 function register_my_menu(){
     register_nav_menu('main', 'The Main menu' );
+    register_nav_menu('medlem', 'menyn när man är inloggad medlem' );
     register_nav_menu('headpages', 'Main pages whit images on frontpage' );
 }
 /** - - - - - - - - - - - - - - - - - - - - - - - - - - - - -**/

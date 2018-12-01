@@ -9,7 +9,7 @@
  wp_head() ?>
 </head>
 <body <?php echo 'class="' . join( ' ', str_replace("custom-background", "", get_body_class())) . '"'; ?>>
-	<div id="wrapper">
+	<div id="wrapper" class="medlem">
 	<header class="main-header" style="<?php
 		if (is_home() && get_option('page_for_posts') ) {
 		    $img = wp_get_attachment_image_src(get_post_thumbnail_id(get_option('page_for_posts')),'full'); 
@@ -24,7 +24,7 @@
 		}								   
 	?>">
 		<?php
-			get_template_part( '/inc/meny', 'meny' );
+			get_template_part( '/inc/meny-medlem', 'meny-medlem' );
 		?>
 		
 		<?php

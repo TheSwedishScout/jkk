@@ -1,7 +1,7 @@
 <?php 
 get_header('home');
 ?>
-<main>
+<main id="main">
 <?php
 	
 	// meny med bilder
@@ -54,6 +54,27 @@ get_header('home');
 
 ?>
 	</div> <!-- latestNews-->
+
+	<div class="page-content">
+		<?php
+			if (have_posts() ) {
+				while ( have_posts() ) {
+					the_post(); 
+					?>
+					<article>
+					
+					<div class="exerpt">
+						<?= the_content();?>
+						</div>		
+					<footer>
+					
+					</footer>
+					</article>
+					<?php
+				}
+			}
+		?>
+	</div>
 </main>
 <?php
 get_footer();

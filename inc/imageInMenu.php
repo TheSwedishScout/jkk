@@ -21,7 +21,7 @@ function ad_filter_menu($sorted_menu_objects, $args) {
         if ( in_array($menu_object->object, array('post', 'page')) ) {
             // set the title to the post_thumbnail if available
             // thumbnail size is the second parameter of get_the_post_thumbnail()
-            $menu_object->title = has_post_thumbnail($menu_object->object_id) ? get_the_post_thumbnail($menu_object->object_id, 'wallsize') . "<p>".$menu_object->title."</p>" : $menu_object->title;
+            $menu_object->title = has_post_thumbnail($menu_object->object_id) ?  "<div style=' background-image: url(".get_the_post_thumbnail_url($menu_object->object_id, 'wallsize').")'><h3>".$menu_object->title."</h3></div>" : $menu_object->title;
         }
     }
     return $sorted_menu_objects;

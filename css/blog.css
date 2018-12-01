@@ -1,0 +1,26 @@
+.blog main{
+	
+	width: 80%;
+    max-width: 1224px;
+    margin: 0 auto;
+}
+.blogPosts{
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-columns: 1fr 1fr;
+	    grid-template-columns: 1fr 1fr;
+    margin-bottom: 10px;
+    grid-auto-rows: auto;
+    grid-gap: 50px;
+}
+.blogPosts article{
+	width: 100%;
+}
+.blogPosts article + article{
+	border: 0;
+}
+.blogPosts article img{
+	max-width: 100%;
+	height: auto;
+
+}

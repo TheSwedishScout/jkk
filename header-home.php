@@ -6,6 +6,7 @@
 	<?php wp_head() ?>
 </head>
 <body <?php echo 'class="' . join( ' ', str_replace("custom-background", "", get_body_class())) . '"'; ?>>
+	<div id="wrapper"> 
 <header class="main-header">
 	
 	<?php the_custom_header_markup() ?>
@@ -21,7 +22,7 @@
 	<?php
 		echo "<h1>".get_bloginfo( 'name' )."</h1>";
 	?>
-	
+	<a href="#main" class="scrollMore"></a>
 </header>
 <?php
 
